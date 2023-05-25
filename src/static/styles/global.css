@@ -38,15 +38,15 @@
 *:after {
   margin: 0;
   padding: 0;
-  line-height: 1;
+  line-height: 18px;
   font-family: var(--font-montserrat);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   border: none;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   outline: none;
-  transition: color .2s;
+  transition: color,background .2s;
 }
 
 body {
@@ -54,14 +54,22 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-weight: 400;
-  background-color: var(--color-white);
+}
+
+.light {
+  background: var(--color-main30);
+}
+
+.dark {
+  background: var(--color-dark20);
 }
 
 main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 ul,
@@ -107,8 +115,13 @@ span {
 }
 
 .icon-16 {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
+}
+
+.icon-30 {
+  width: 30px;
+  height: 30px;
 }
 
 .button {
@@ -119,14 +132,13 @@ span {
   font-size: 12px;
   border-radius: var(--border-rd-md);
   border: 1px solid;
-  border-image-source: linear-gradient(180deg, #4DB5E4 0%, #0095D9 100%);
   transition: color 0.2s;
 }
 
-.button_light {
+.light .button {
   color: var(--color-blue100);
 }
 
-.button_dark {
+.dark .button {
   color: var(--color-blue-dark100);
 }
