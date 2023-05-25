@@ -26,7 +26,7 @@
 			<ul class="customize__list">
 				<li class="customize__item">
 					<span class="customize__description">Двухфакторная аутентификация</span>
-					<a href="#" class="customize__link">
+					<a href="#" data-modal-open class="customize__link">
 						<svg class="icon-16">
 							<use xlink:href="../static/icons/sprite.svg#authentication"></use>
 						</svg>
@@ -57,7 +57,7 @@
 		</section>
 	</main>
 
-	<div class="modal">
+	<div data-modal class="modal modal_close modal_hidden">
 		<div class="modal__content">
 			<h2 class="modal__headline">Заголовок</h2>
 
@@ -66,7 +66,7 @@
 				Consectetur dui velit et quam id. Lorem ipsum dolor sit amet consectetur.
 			</p>
 
-			<button class="modal__close">
+			<button data-modal-close class="modal__close">
 				<svg class="icon-24">
 					<use xlink:href="../static/icons/sprite.svg#close"></use>
 				</svg>

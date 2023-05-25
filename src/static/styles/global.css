@@ -119,10 +119,42 @@ span {
   transition: color 0.2s;
 }
 
+.button:focus {
+  outline: thick double var(--color-main60);
+}
+
 .light .button {
   color: var(--color-blue100);
 }
 
 .dark .button {
   color: var(--color-blue-dark100);
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes down {
+  from {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+  }
 }

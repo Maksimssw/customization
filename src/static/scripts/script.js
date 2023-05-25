@@ -19,4 +19,29 @@ window.addEventListener('DOMContentLoaded', () => {
         : toggleTheme('light', 'dark')
     })
   }
+
+  {
+    // Modal window
+    const openModal = document.querySelector('[data-modal-open]')
+    const closeModal = document.querySelector('[data-modal-close]')
+    const modal = document.querySelector('[data-modal]')
+
+    const toggleModal = () => {
+      modal.classList.remove('modal_hidden')
+      modal.classList.toggle('modal_close')
+    }
+
+    openModal.addEventListener('click', toggleModal)
+    closeModal.addEventListener('click', toggleModal)
+
+    modal.addEventListener('click', (event) => {
+      if (event.target.classList.contains('modal')) toggleModal()
+    })
+
+    window.addEventListener('keydown', (event) => {
+      if (!modal.classList.contains('modal_close')) {
+        event.code === 'Escape' ? toggleModal() : ''
+      }
+    })
+  }
 })
