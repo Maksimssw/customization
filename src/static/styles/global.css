@@ -17,20 +17,10 @@
   --color-dark20:       #2D2D2D;
   --color-dark50:       #252525;
 
-
-  --container-width: 398px;
-  --container-indent: calc(50% - var(--container-width) / 2);
-
   --font-montserrat: 'Montserrat', sans-serif;
 
   --border-rd-md: 4px;
   --border-rd-lg: 8px;
-}
-
-@media (max-width: 1600px) {
-  :root {
-    --container-indent: 24px;
-  }
 }
 
 *,
@@ -54,14 +44,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-weight: 400;
-}
-
-.light {
-  background: var(--color-main30);
-}
-
-.dark {
-  background: var(--color-dark20);
 }
 
 main {
@@ -103,20 +85,22 @@ span {
   display: block;
 }
 
-.container {
-  padding-right: var(--container-indent);
-  padding-left: var(--container-indent);
+.light {
+  background: var(--color-main30);
 }
 
-.grid-row {
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
+.dark {
+  background: var(--color-dark20);
 }
 
 .icon-16 {
   width: 16px;
   height: 16px;
+}
+
+.icon-24 {
+  width: 24px;
+  height: 24px;
 }
 
 .icon-30 {
